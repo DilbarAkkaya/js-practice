@@ -73,11 +73,48 @@ const nuggets = 2;
 if (hamburger || cola || fries === 3 || nuggets) {
    console.log('Done!')
 } */
-let hamburger;
+/* let hamburger;
 const fries = NaN;
 const cola = 0;
 const nuggets = 2;
  
 if (hamburger && cola || fries === 3 && nuggets) {
    console.log('Done!')
+} */
+/* const hamburger = 3;
+const fries = 0;
+const cola = 0;
+const nuggets = 2;
+ 
+if (hamburger || cola || fries || nuggets) {
+   console.log('we stay here')
+} else {
+  console.log('we are going away')
+} */
+/* const hamburger = 0;
+const fries = 0;
+const cola = 0;
+const nuggets = null;
+ 
+if (hamburger || cola || fries || nuggets) {
+   console.log('we stay here')
+} else {
+  console.log('we are going away')
 }
+console.log(hamburger || cola || fries || nuggets); */
+/* let johnReport, alexReport, samReport, mariaReport = 'done';
+console.log(johnReport || alexReport || samReport || mariaReport); */
+
+/* const hamburger = 3;
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+
+if(hamburger === 3 && cola === 2 || fries === 3 && nuggets) {
+  console.log('we are happy');
+} else {
+  console.log('we are going away')
+}
+ console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets); */
+ console.log( NaN || 2 || undefined );
+ console.log(null || 0 || '' || undefined || 5);
