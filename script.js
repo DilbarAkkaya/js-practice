@@ -116,5 +116,16 @@ if(hamburger === 3 && cola === 2 || fries === 3 && nuggets) {
   console.log('we are going away')
 }
  console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets); */
- console.log( NaN || 2 || undefined );
- console.log(null || 0 || '' || undefined || 5);
+/*  console.log( NaN || 2 || undefined );
+ console.log(null || 0 || '' || undefined || 5); */
+console.log(!0);
+console.log( !1 && 2 || !3 );
+console.log(!3);
+console.log( 25 || null && !3 );
+console.log( NaN || null || !3 || undefined || 5);
+console.log( NaN || null && !3 && undefined || 5);
+console.log( 5 === 5 && 3 > 1 || 5);
+console.log(5 < 3 && 5<7);
+console.log(!null);
+console.log(!true);
+console.log(!null && !false);
