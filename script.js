@@ -28,3 +28,12 @@ switch (num) {
       default:
         console.log('Not this time')
 } */
+
+const hamburger = true;
+const fries = true;
+
+if (hamburger && fries) {
+  console.log('i am full')
+}
+console.log(hamburger && fries);
+
