@@ -37,10 +37,47 @@ if (hamburger && fries) {
 }
 console.log(hamburger && fries); */
 
-const hamburger = 5;
+/* const hamburger = 5;
 const fries = 3;
-if(hamburger === 3 && fries) {
+const cola = 0;
+if(hamburger === 3 && cola === 1 && fries) {
   console.log('all friends are full')
 } else {
   console.log('we go away')
+} */
+
+//console.log(hamburger === 3 && cola === 1 && fries);
+console.log(1 && 0);
+console.log(true && true);
+console.log(true && false);
+console.log(1 && 4 && 0);
+console.log(5 && null);
+console.log(0 && '');
+console.log(undefined && null);
+console.log( NaN && 2 && undefined );
+console.log( 1 && 2 && 3 );
+/* const hamburger = 3;
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+ 
+if (hamburger === 3 && cola || fries === 3 && nuggets) {
+   console.log('Done!')
+} */
+
+/* let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+ 
+if (hamburger || cola || fries === 3 || nuggets) {
+   console.log('Done!')
+} */
+let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+ 
+if (hamburger && cola || fries === 3 && nuggets) {
+   console.log('Done!')
 }
