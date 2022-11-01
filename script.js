@@ -29,11 +29,18 @@ switch (num) {
         console.log('Not this time')
 } */
 
-const hamburger = true;
-const fries = true;
+/* const hamburger = 5;
+const fries = 3;
 
 if (hamburger && fries) {
   console.log('i am full')
 }
-console.log(hamburger && fries);
+console.log(hamburger && fries); */
 
+const hamburger = 5;
+const fries = 3;
+if(hamburger === 3 && fries) {
+  console.log('all friends are full')
+} else {
+  console.log('we go away')
+}
