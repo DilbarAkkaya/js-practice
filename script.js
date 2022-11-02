@@ -243,8 +243,20 @@ while(i <= 10) {
  } */
 
  //Заполните массив цифрами от 5 до 10 включительно. Помните, что элементы массива можно сформировать так же, как и обращаться к ним: arr[0]
- let arr = [];
+/*  let arr = [];
  for(let i = 5; i<11; i++) {
   arr[i-5] = i
  }
- console.log(arr)
+ console.log(arr) */
+/* 
+ let i = 3;
+ while(i) {
+  alert(i--);
+ }
+ console.log(i) */
+/* 
+ let i = 0;
+while (++i < 5) alert( i ); */
+
+/* let i = 0;
+while (i++ < 5) alert( i ); */
