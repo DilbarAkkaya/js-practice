@@ -282,7 +282,7 @@ do{
   i = prompt('Enter a number greater than 100',0);
 }while(i<=100&&i);
 let n = 10; */
-let n=10;
+/* let n=10;
 nextPrime:
 for (let i = 2; i <= n; i++) { // for each i...
 
@@ -291,4 +291,11 @@ for (let i = 2; i <= n; i++) { // for each i...
   }
 
   alert( i ); // a prime
+} */
+//Заполните новый массив (result) числами из старого (arr). Количество элементов в массиве можно получить как arr.length, а к элементам обращаемся все так же: arr[0], arr[1] и тд.
+let result = [];
+const arr = [3, 5, 8, 16, 20, 23, 50];
+for(let i=0; i<arr.length; i++) {
+result[i] = arr[i]
 }
+console.log(result)
