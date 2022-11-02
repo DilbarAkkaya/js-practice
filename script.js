@@ -47,7 +47,7 @@ if(hamburger === 3 && cola === 1 && fries) {
 } */
 
 //console.log(hamburger === 3 && cola === 1 && fries);
-console.log(1 && 0);
+/* console.log(1 && 0);
 console.log(true && true);
 console.log(true && false);
 console.log(1 && 4 && 0);
@@ -55,7 +55,7 @@ console.log(5 && null);
 console.log(0 && '');
 console.log(undefined && null);
 console.log(NaN && 2 && undefined);
-console.log(1 && 2 && 3);
+console.log(1 && 2 && 3); */
 /* const hamburger = 3;
 const fries = 3;
 const cola = 0;
@@ -193,7 +193,7 @@ console.log(result) */
     }
   }
 } */
-first: for(let i = 0; i<3; i++) {
+/* first: for(let i = 0; i<3; i++) {
   console.log(`First level: ${i}`);
   for(j=0; j<3; j++) {
     console.log(`Second level: ${j}`);
@@ -202,4 +202,49 @@ first: for(let i = 0; i<3; i++) {
       console.log(`Third level:${k}`)
     }
   }
-}
+} */
+//При помощи цикла выведите числа от 5 до 10 в консоль. 5 и 10 включительно. Цикл можно использовать любой
+/* let i=5;
+while(i <= 10) {
+  console.log(i);
+  i++;
+} */
+
+//При помощи цикла for вывести числа от 20 до 10 в консоль. В обратном порядке (20, 19, 18...). Когда цикл дойдет до числа 13 - остановить весь цикл
+/* for (let i = 20; i >10; --i){
+  console.log(i);
+  if(i === 13) break;
+} */
+//При помощи цикла for выведите чётные числа от 2 до 10 включительно
+/* for(let i = 2; i<=10;i++) {
+  if(i%2===0){
+    console.log(i)
+  }
+
+} */
+//Перепишите цикл  for на вариант с while. Результат должен остаться точно таким же. Не создайте бесконечный цикл! Иначе браузер может зависнуть.
+//Цикл, который нужно переписать:
+/*  for (let i = 2; i <= 16; i++) {
+     if (i % 2 === 0) {
+         continue;
+     } else {
+         console.log(i);
+     }
+ } */
+/* let i=2;
+ while(i<=16) {
+  if (i%2===0) {
+    i++;
+    continue;
+  } else{
+    console.log(i);
+  }
+  i++;
+ } */
+
+ //Заполните массив цифрами от 5 до 10 включительно. Помните, что элементы массива можно сформировать так же, как и обращаться к ним: arr[0]
+ let arr = [];
+ for(let i = 5; i<11; i++) {
+  arr[i-5] = i
+ }
+ console.log(arr)
