@@ -1,4 +1,4 @@
-let numberOfFilms;
+/* let numberOfFilms;
 function start(){
   numberOfFilms = +prompt('How many movies have you watched?', '');
   while (numberOfFilms='' || numberOfFilms == null || isNaN(numberOfFilms)) {
@@ -39,7 +39,7 @@ function detectPersonalLevel(){
   }
 }
  detectPersonalLevel();
-console.log(personalMoviesDB) 
+console.log(personalMoviesDB)  */
 
 /* const num = 50;
 switch (num) {
@@ -360,3 +360,11 @@ for(let j=0; j<2*i +1;j++){
 result += "\n";
 }
 console.log(result) */
+
+/* function showMessage (){
+  console.log('hello world')
+} */
+showMessage('hello world');
+ function showMessage(text) {
+  console.log(text)
+ }
