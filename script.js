@@ -17,8 +17,16 @@ for(let i = 0; i < 2; i++) {
           console.log('error');
           i--;
         }
- 
-}
+  }
+  if(personalMoviesDB.count < 10) {
+    console.log('Watched so little movies')
+  } else if (personalMoviesDB.count>=10 && personalMoviesDB.count<30){
+   console.log('you are a classic spectator')
+  }else if(personalMoviesDB.count >= 30) {
+    console.log('you are movieman')
+  }else {
+    console.log('Error')
+  }
 console.log(personalMoviesDB) 
 
 /* const num = 50;
