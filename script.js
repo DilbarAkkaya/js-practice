@@ -26,6 +26,7 @@ function rememberMyFilms(){
           }
     }
 }
+rememberMyFilms();
 function detectPersonalLevel(){
   if(personalMoviesDB.count < 10) {
     console.log('Watched so little movies')
