@@ -1,4 +1,11 @@
-const numberOfFilms = +prompt('How many movies have you watched?', '');
+let numberOfFilms;
+function start(){
+  numberOfFilms = +prompt('How many movies have you watched?', '');
+  while (numberOfFilms='' || numberOfFilms == null || isNaN(numberOfFilms)) {
+    numberOfFilms = +prompt('How many movies have you watched?', '');
+  }
+}
+start();
 const personalMoviesDB = {
   count: numberOfFilms,
   movies: {},
@@ -6,18 +13,20 @@ const personalMoviesDB = {
   genres: [],
   privat: false
 };
-
-for(let i = 0; i < 2; i++) {
-  const a = prompt('One of last watched movies?',''),
-        b = prompt('How much do you rate it?','');
-        if(a != null && b != null && a != '' && b!='' && a.length <50) {
-          personalMoviesDB.movies[a] = b;
-          console.log('done');
-        } else {
-          console.log('error');
-          i--;
-        }
-  }
+function rememberMyFilms(){
+  for(let i = 0; i < 2; i++) {
+    const a = prompt('One of last watched movies?',''),
+          b = prompt('How much do you rate it?','');
+          if(a != null && b != null && a != '' && b!='' && a.length <50) {
+            personalMoviesDB.movies[a] = b;
+            console.log('done');
+          } else {
+            console.log('error');
+            i--;
+          }
+    }
+}
+function detectPersonalLevel(){
   if(personalMoviesDB.count < 10) {
     console.log('Watched so little movies')
   } else if (personalMoviesDB.count>=10 && personalMoviesDB.count<30){
@@ -27,6 +36,8 @@ for(let i = 0; i < 2; i++) {
   }else {
     console.log('Error')
   }
+}
+ detectPersonalLevel();
 console.log(personalMoviesDB) 
 
 /* const num = 50;
