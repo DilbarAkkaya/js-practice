@@ -10,7 +10,14 @@ const personalMoviesDB = {
 for(let i = 0; i < 2; i++) {
   const a = prompt('One of last watched movies?',''),
         b = prompt('How much do you rate it?','');
-  personalMoviesDB.movies[a] = b;
+        if(a != null && b != null && a != '' && b!='' && a.length <50) {
+          personalMoviesDB.movies[a] = b;
+          console.log('done');
+        } else {
+          console.log('error');
+          i--;
+        }
+ 
 }
 console.log(personalMoviesDB) 
 
