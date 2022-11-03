@@ -1,4 +1,4 @@
-/* const numberOfFilms = +prompt('How many movies have you watched?', '');
+const numberOfFilms = +prompt('How many movies have you watched?', '');
 const personalMoviesDB = {
   count: numberOfFilms,
   movies: {},
@@ -6,13 +6,13 @@ const personalMoviesDB = {
   genres: [],
   privat: false
 };
-const a = prompt('One of last watched movies?','');
-const b = prompt('How much do you rate it?','');
-const c = prompt('One of last watched movies?','');
-const d = prompt('How much do you rate it?','');
-personalMoviesDB.movies[a] = b;
-personalMoviesDB.movies[c] = d;
-console.log(personalMoviesDB) */
+
+for(let i = 0; i < 2; i++) {
+  const a = prompt('One of last watched movies?',''),
+        b = prompt('How much do you rate it?','');
+  personalMoviesDB.movies[a] = b;
+}
+console.log(personalMoviesDB) 
 
 /* const num = 50;
 switch (num) {
@@ -130,7 +130,7 @@ console.log(!null);
 console.log(!true);
 console.log(!null && !false); */
 
-let num = 50;
+//let num = 50;
 /* while(num<=55) {
   console.log(num);
   num++;
@@ -299,7 +299,7 @@ for(let i=0; i<arr.length; i++) {
 result[i] = arr[i]
 }
 console.log(result) */
-const data = [5, 10, 'Shopping', 20, 'Homework'];
+//const data = [5, 10, 'Shopping', 20, 'Homework'];
 //Измените данный массив так, чтобы все числа были увеличены в 2 раза, а если попадается строка строка - то к ней было добавлено " - done".
 //Для определения типа данных используйте typeof();
 //Должно получиться: [ 10, 20, 'Shopping - done', 40, 'Homework - done' ]
@@ -321,7 +321,7 @@ for(let i=0; i<data.length;i++){
   result[i] = data[[data.length-1] - i];
 }
 console.log(result) */
-let result='';
+//let result='';
 /* const lines = 5;
 for(let i = 0; i<=lines; i++) {
   for(let j = 0; j<lines-i;j++){
