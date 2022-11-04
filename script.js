@@ -445,3 +445,14 @@ function getCoupeNumber(num){
     return Math.ceil(num/4)
   }
 }
+
+/* Напишите функцию, которая принимает в себя 4 числа и возвращает самое большее из них. Если один из аргументов не является числом или их меньше 4 - возвращается 0. Дробные числа разрешены
+*/
+function findMaxNumber(a,b,c,d) {
+  if(typeof a !== 'number' ||
+     typeof b !== 'number' ||
+     typeof c !== 'number' ||
+     typeof d !== 'number') {
+      return 0
+  } return Math.max(a, b, c, d)
+}
