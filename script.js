@@ -380,7 +380,7 @@ console.log(result) */
 
  //3) Создайте функцию, которая будет принимать в себя 2 аргумента, оба числа. Первое число - это база, второе число - это сколько раз нужно будет повторить это число в прогрессии. (Смотри пример ниже). Функция должна возвращать строку (или число в особых случаях, о которых ниже), где эти числа идут по порядку, разделенные тремя дефисами "---". После последнего числа их не должно быть.
 //Если второй аргумент не является числом, равен или меньше нуля - то возвращать просто первый аргумент. (Проверяем через оператор typeof)
-function getMathResult (base, times) {
+/* function getMathResult (base, times) {
   let result = '';
   if(typeof n !== 'number'||n === 0|| n<0) {
     return base;
@@ -392,4 +392,26 @@ function getMathResult (base, times) {
       res+=`${base*i}---`
     }
   }
-}
+} */
+//methods of string and number
+const str = 'Hello world';
+const num = 12.2;
+const num1 = 12.8;
+const test = '12.8px';
+console.log(str.length);//11
+console.log(str.indexOf('world'));//6
+console.log(str.indexOf('q'));//-1
+console.log(str.slice(6, 11));//world
+console.log(str.slice(6));//world
+console.log(str.slice(0));//Hello world
+console.log(str.slice(1, -1));//ello worl
+console.log(str.slice(-1,1));//''
+console.log(str.substring(6, 11));//world
+console.log(str.substring(1,-1))//H
+console.log(str.substring(11, 2));//llo world
+console.log(Math.round(num))//12
+console.log(Math.round(num1))//13
+console.log(Math.ceil(num))//13
+console.log(Math.ceil(num1))//13
+console.log(parseFloat(test));//12.8
+console.log(parseInt(test));//12
