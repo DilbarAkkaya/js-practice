@@ -521,6 +521,8 @@ function learnJS(lang, callback){
   console.log(`I learn: ${lang}`);
   callback();
 }
-learnJS('Javascript', function() {
+
+function done(){
   console.log('I pass first lesson');
-});
+}
+learnJS('Javascript', done);
