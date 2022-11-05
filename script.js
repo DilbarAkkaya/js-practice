@@ -486,7 +486,7 @@ return `Это ${hours} ${hoursStr} и ${minutes} минут`;
 } */
 /*Создайте функцию, которая будет принимать в себя один аргумент-целое положительное число. Она должна возвращать строку, в которой будут через пробел выведены числа Фибоначчи. Причем, их количество должно быть равно переданному аргументу.
 Если переданный аргумент не число - вернуть пустую строку. Решать без применения рекурсии.*/
-function fib(num){
+/* function fib(num){
   if(num <=0  || !Number.isInteger(num) || typeof num !== 'number') {
     return "";
   }
@@ -504,4 +504,23 @@ for (let i = 0; i < num; i++){
   second = third;
 }
 return result;
+} */
+
+function first(){
+  setTimeout(function() {
+    console.log(1);
+  }, 500);
 }
+
+function second() {
+  console.log(2);
+}
+first();
+second();
+function learnJS(lang, callback){
+  console.log(`I learn: ${lang}`);
+  callback();
+}
+learnJS('Javascript', function() {
+  console.log('I pass first lesson');
+});
