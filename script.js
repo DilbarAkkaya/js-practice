@@ -505,7 +505,7 @@ for (let i = 0; i < num; i++){
 }
 return result;
 } */
-
+/* 
 function first(){
   setTimeout(function() {
     console.log(1);
@@ -525,4 +525,37 @@ function learnJS(lang, callback){
 function done(){
   console.log('I pass first lesson');
 }
-learnJS('Javascript', done);
+learnJS('Javascript', done); */
+/* const options = {
+  name: 'test',
+  width: 1024,
+  height: 1024,
+  colors: {
+    border: 'black',
+    bg: 'red',
+  },
+  makeTest: function(){
+    console.log("Test");
+  }
+}
+options.makeTest();
+const {border, bg} = options.colors;
+console.log(border); */
+/* console.log(options.name);
+//delete options.name;
+console.log(options);
+for (let key in options) {
+  console.log(`Property ${key} has value ${options[key]}`)
+} */
+/* 
+for (let key in options) {
+  if(typeof options[key] === 'object') {
+    for(let i in options[key]){
+      console.log(`Property ${i} has value ${options[key][i]}`)
+    }
+  } else {
+      console.log(`Property ${key} has value ${options[key]}`)
+    }
+  }
+  console.log(Object.keys(options));//['name', 'width', 'height', 'colors']
+  console.log(Object.keys(options).length);//4 */
