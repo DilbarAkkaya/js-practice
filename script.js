@@ -559,3 +559,31 @@ for (let key in options) {
   }
   console.log(Object.keys(options));//['name', 'width', 'height', 'colors']
   console.log(Object.keys(options).length);//4 */
+/* const arr = [2, 13, 26, 8, 15];
+arr.sort(compareNum);
+console.log(arr);
+function compareNum(a, b) {
+  return a-b;
+} */
+//arr.pop();
+//arr.push(6);
+//arr.shift();
+//arr.unshift();
+/* for(let i = 0; i < arr.length; i++){
+  console.log(arr[i]);
+}
+
+for (let val of arr) {
+  console.log(val)
+}
+arr[99]=0;
+console.log(arr.length);
+console.log(arr); */
+/* arr.forEach(function(item, i, arr){
+  console.log(`${i}: ${item} inside array ${arr}`)
+});
+const string = prompt("","");
+const products = string.split(", ");
+
+console.log(products.join('; '));
+ */
