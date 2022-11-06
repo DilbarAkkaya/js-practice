@@ -693,3 +693,11 @@ console.log(str);
 }
 }
 standardizeStrings(['dddAAAA']) */
+//another way
+/* function standardizeStrings(arr) {
+  let str='';
+  arr.forEach(element => {
+    console.log(element.toLowerCase());
+  });
+}
+standardizeStrings(['DDDD']) */
