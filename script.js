@@ -587,7 +587,7 @@ const products = string.split(", ");
 
 console.log(products.join('; '));
  */
-let a =5;
+/* let a =5;
 let b = a;
 b= b + 5;
 console.log(b);
@@ -599,4 +599,23 @@ const obj = {
 const copy = obj;
 copy.a = 10;
 console.log(copy);
-console.log(obj)
+console.log(obj); */
+/* 1) Напишите функцию showExperience, которая будет принимать в себя объект со всеми данными и возвращать строку с опытом.
+Пример: showExperience(personalPlanPeter) => '1 month'
+P.S. желательно использовать деструктуризацию, но не обязательно */
+const personalPlanPeter = {
+  name: "Peter",
+  age: "29",
+  skills: {
+    languages: ['ru', 'eng'],
+    programmingLangs: {
+      js:'20%',
+      php:'10%'
+    },
+    exp: '1 month',
+}}
+
+function showExperience(plan){
+  const {exp}=plan.skills;
+  return exp;
+}
