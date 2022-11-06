@@ -714,3 +714,11 @@ reverse(someString) => 'gnirts egnarts emos si sihT'
   }
 }
 console.log(reverse('ABCD')) */
+//another way
+function reverse(str){
+  let newStr ='';
+  for(let i=str.length-1;i>=0;i--){
+newStr+=str[i];
+  }
+  return newStr;
+}
