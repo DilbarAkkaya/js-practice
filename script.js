@@ -701,3 +701,16 @@ standardizeStrings(['dddAAAA']) */
   });
 }
 standardizeStrings(['DDDD']) */
+/*3)Напишите функцию reverse, которая принимает в себя строку и возвращает эту строку в обратном порядке.
+Пример:
+const someString = 'This is some strange string';
+reverse(someString) => 'gnirts egnarts emos si sihT'
+Функцию можно применить к любой строке. Если в функцию приходит не строка - вернуть сообщение "Ошибка!"*/
+/* function reverse(str){
+  if(typeof str !== 'string') {
+    return "Ошибка!"
+  } else {
+    return str.split('').reverse().join('');
+  }
+}
+console.log(reverse('ABCD')) */
