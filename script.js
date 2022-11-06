@@ -678,3 +678,18 @@ if(!family.length) {
 }
 }
 console.log(showFamily([])); */
+/*2) напишите функцию standardizeStrings, которая будет принимать в себя массив строк и будет выводить в консоль эти строки в нижнем регистре.
+Пример:
+standardizeStrings(favoriteCities)  выведет в консоль
+lisbon
+rome
+milan
+dublin*/
+/* function standardizeStrings(arr){
+  let str = '';
+for(let i = 0; i < arr.length; i++) {
+str=`${arr[i].toLowerCase()}`
+console.log(str);
+}
+}
+standardizeStrings(['dddAAAA']) */
