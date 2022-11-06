@@ -644,7 +644,7 @@ for(let key in programmingLangs) {
 return '';
 } */
 /*3) Создайте метод showAgeAndLangs внутри объекта personalPlanPeter. При его вызове метод будет принимать в себя объект и возвращать строку в нужном виде.*/
-const personalPlanPeter = {
+/* const personalPlanPeter = {
   name: "Peter",
   age: "29",
   skills: {
@@ -662,4 +662,19 @@ let str=`Мне ${age} и я владею языками:`;
 languages.forEach(function(element){
   str += ` ${element.toUpperCase()}`
 });
-}}
+}} */
+/*1) Напишите функцию showFamily, которая будет принимать в себя массив строк и возвращать сообщение в нужном формате.
+showFamily(family)  => 'Семья состоит из: Peter Ann Alex Linda'
+Имена подставляются автоматически из массива. Если массив пустой, то выводится сообщение 'Семья пуста'*/
+/* function showFamily(family){
+let str= '';
+if(!family.length) {
+  return 'Семья пуста';
+} else {
+  for(let i=0; i<family.length;i++) {
+    str+=`Семья состоит из: ${family[i]}`;
+  }
+  return str;
+}
+}
+console.log(showFamily([])); */
