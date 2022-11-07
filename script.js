@@ -7,7 +7,7 @@ const personalMoviesDB = {
   privat: false,
   start: function(){
     personalMoviesDB.count = +prompt('How many movies have you watched?', '');
-    while (personalMoviesDB.count='' || personalMoviesDB.count == null || isNaN(personalMoviesDB.count)) {
+    while (personalMoviesDB.count =='' || personalMoviesDB.count == null || isNaN(personalMoviesDB.count)) {
       personalMoviesDB.count = +prompt('How many movies have you watched?', '');
     }
   },
@@ -39,6 +39,13 @@ const personalMoviesDB = {
  if(!hidden){
   console.log(personalMoviesDB);
  }
+  },
+  toggleVisibleMyDB: function(){
+if(personalMoviesDB.privat) {
+  personalMoviesDB.privat = false;
+}else {
+  personalMoviesDB.privat =true;
+}
   },
   writeYourGenres: function(){
     for(let i=1; i<=3;i++){
