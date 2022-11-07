@@ -745,7 +745,7 @@ function availableCurr(arr, missinggCurr){
 }
 console.log(availableCurr(['sdfd','sfdf','aaa'])); */
 //another way
-const baseCurrencies = ['USD', 'EUR'];
+/* const baseCurrencies = ['USD', 'EUR'];
 const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 function availableCurr(arr, missinggCurr){
   let str ='';
@@ -760,4 +760,19 @@ function availableCurr(arr, missinggCurr){
     }
   });
   return str;
+} */
+/* const soldier = {
+  health: 400,
+  armor: 100,
+  sayHello: function(){
+    console.log('Hello');
+  }
 }
+const john = {
+  health: 100
+} */
+//john.__proto__=soldier;
+//Object.setPrototypeOf(john,soldier)
+//console.log(john.armor)
+/* const john = Object.create(soldier);
+console.log(john.armor); */
