@@ -731,7 +731,7 @@ availableCurr(['UAH', 'RUB', 'CNY'], 'CNY')
 Вернет строку:
 Доступные валюты:
 UAH*/
-const baseCurrencies = ['USD', 'EUR'];
+/* const baseCurrencies = ['USD', 'EUR'];
 const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
 function availableCurr(arr, missinggCurr){
   let str ='';
@@ -743,4 +743,21 @@ function availableCurr(arr, missinggCurr){
   }
   return str;
 }
-console.log(availableCurr(['sdfd','sfdf','aaa']));
+console.log(availableCurr(['sdfd','sfdf','aaa'])); */
+//another way
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+function availableCurr(arr, missinggCurr){
+  let str ='';
+  if(arr.length === 0) {
+    str = 'Нет доступных валют';
+  } else {
+    str = 'Доступные валюты:\n';
+  }
+  arr.forEach(element => {
+    if(element !== missinggCurr) {
+      str += `${element}\n`;
+    }
+  });
+  return str;
+}
