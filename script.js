@@ -1,45 +1,53 @@
-/* let numberOfFilms;
-function start(){
-  numberOfFilms = +prompt('How many movies have you watched?', '');
-  while (numberOfFilms='' || numberOfFilms == null || isNaN(numberOfFilms)) {
-    numberOfFilms = +prompt('How many movies have you watched?', '');
-  }
-}
-start();
+
 const personalMoviesDB = {
-  count: numberOfFilms,
+  count: 0,
   movies: {},
   actors: {},
   genres: [],
-  privat: false
-};
-function rememberMyFilms(){
-  for(let i = 0; i < 2; i++) {
-    const a = prompt('One of last watched movies?','').trim(),
-          b = prompt('How much do you rate it?','');
-          if(a != null && b != null && a != '' && b!='' && a.length <50) {
-            personalMoviesDB.movies[a] = b;
-            console.log('done');
-          } else {
-            console.log('error');
-            i--;
-          }
+  privat: false,
+  start: function(){
+    personalMoviesDB.count = +prompt('How many movies have you watched?', '');
+    while (personalMoviesDB.count='' || personalMoviesDB.count == null || isNaN(personalMoviesDB.count)) {
+      personalMoviesDB.count = +prompt('How many movies have you watched?', '');
     }
-}
-rememberMyFilms();
-function detectPersonalLevel(){
-  if(personalMoviesDB.count < 10) {
-    console.log('Watched so little movies')
-  } else if (personalMoviesDB.count>=10 && personalMoviesDB.count<30){
-   console.log('you are a classic spectator')
-  }else if(personalMoviesDB.count >= 30) {
-    console.log('you are movieman')
-  }else {
-    console.log('Error')
+  },
+  rememberMyFilms: function(){
+    for(let i = 0; i < 2; i++) {
+      const a = prompt('One of last watched movies?','').trim(),
+            b = prompt('How much do you rate it?','');
+            if(a != null && b != null && a != '' && b!='' && a.length <50) {
+              personalMoviesDB.movies[a] = b;
+              console.log('done');
+            } else {
+              console.log('error');
+              i--;
+            }
+      }
+  },
+  detectPersonalLevel: function(){
+    if(personalMoviesDB.count < 10) {
+      console.log('Watched so little movies')
+    } else if (personalMoviesDB.count>=10 && personalMoviesDB.count<30){
+     console.log('you are a classic spectator')
+    }else if(personalMoviesDB.count >= 30) {
+      console.log('you are movieman')
+    }else {
+      console.log('Error')
+    }
+  },
+  showMyDB: function(hidden){
+ if(!hidden){
+  console.log(personalMoviesDB);
+ }
+  },
+  writeYourGenres: function(){
+    for(let i=1; i<=3;i++){
+      personalMoviesDB.genres[i-1] = prompt(`Your favorite genre is ${i}`)
+    }
   }
-}
- detectPersonalLevel();
-console.log(personalMoviesDB)  */
+};
+
+console.log(personalMoviesDB) 
 
 /* const num = 50;
 switch (num) {
