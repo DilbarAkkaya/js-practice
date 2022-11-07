@@ -715,10 +715,32 @@ reverse(someString) => 'gnirts egnarts emos si sihT'
 }
 console.log(reverse('ABCD')) */
 //another way
-function reverse(str){
+/* function reverse(str){
   let newStr ='';
   for(let i=str.length-1;i>=0;i--){
 newStr+=str[i];
   }
   return newStr;
+} */
+/*4) Представьте такую реальную ситуацию. У вас есть банкомат, который выдает деньги из двух разных банков в разных валютах. Один банк основной с базовыми валютами, второй дополнительный с прочими валютами:
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+Вам нужно создать главную функцию банкомата availableCurr, которая принимает два аргумента: первый - это массив со всеми доступными валютами из двух банков сразу (сейчас представим, что они не могут повторяться), второй - необязательный аргумент, который указывает ту валюту, которая сейчас закончилась в банкомате. Если массив в первом аргументе пустой - то функция возвращает строку 'Нет доступных валют'. Функция возвращает строку в нужном виде.
+Пример:
+availableCurr(['UAH', 'RUB', 'CNY'], 'CNY')
+Вернет строку:
+Доступные валюты:
+UAH*/
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+function availableCurr(arr, missinggCurr){
+  let str ='';
+  !arr.length ? str = 'Нет доступных валют' : str = 'Доступные валюты:\n';
+  for(let i=0; i<arr.length;i++){
+    if(arr[i] !== missinggCurr) {
+      str+=`${arr[i]}\n`;
+    }
+  }
+  return str;
 }
+console.log(availableCurr(['sdfd','sfdf','aaa']));
