@@ -872,3 +872,15 @@ function sortStudentsByGroups(arr){
   }
   return [a,b,c, `Оставшиеся студенты: ${res.length === 0 ? '-': res.join(', ')}`]
 }
+
+//is it a palindrome?
+function isPalindrom(x){
+  let a = x.toLowerCase().split('');
+let b = a.reverse();
+let c =  b.join('');
+if(x.toLowerCase() === c) {
+  return true
+}
+return false
+}
+console.log(isPalindrom('aaaaabbbbaaaaa'))
