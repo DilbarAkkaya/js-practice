@@ -907,7 +907,7 @@ console.log(numberToString(15)) */
 }
 console.log(isLockNessMonster('tree fiddy')) */
 //anagram
-var isAnagram = function(test, original) {
+/* var isAnagram = function(test, original) {
   if(test.length !== original.length) {
     return false;
   }
@@ -918,4 +918,9 @@ var isAnagram = function(test, original) {
   }
   return false
 };
-console.log(isAnagram('djfsnriw','hpphkf'));
+console.log(isAnagram('djfsnriw','hpphkf')); */
+//odd-even
+function evenOrOdd(num){
+ return (num%2===0) ? 'Even':'Odd';
+}
+console.log(evenOrOdd(33))
