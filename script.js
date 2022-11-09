@@ -874,7 +874,7 @@ function sortStudentsByGroups(arr){
 }
 
 //is it a palindrome?
-function isPalindrom(x){
+/* function isPalindrom(x){
   let a = x.toLowerCase().split('');
 let b = a.reverse();
 let c =  b.join('');
@@ -883,4 +883,10 @@ if(x.toLowerCase() === c) {
 }
 return false
 }
-console.log(isPalindrom('aaaaabbbbaaaaa'))
+console.log(isPalindrom('aaaaabbbbaaaaa')) */
+
+//removeChar
+function removeChar(str){
+  return str.slice(1, -1);
+}
+console.log(removeChar('Abba'))
