@@ -896,9 +896,13 @@ console.log(removeChar('Abba')) */
 }
 console.log(numberToString(15)) */
 //A Strange Trip to the Market
-function isLockNessMonster(s) {
+/* function isLockNessMonster(s) {
   if(s.includes('3.50') || s.includes('three fifty') || s.includes('tree fiddy')) {
     return true
   }
+} */
+//another way
+function isLockNessMonster(s) {
+  return /tree fiddy|three fifty|3.50/.test(s);
 }
 console.log(isLockNessMonster('tree fiddy'))
