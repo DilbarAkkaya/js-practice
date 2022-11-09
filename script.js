@@ -920,7 +920,17 @@ console.log(isLockNessMonster('tree fiddy')) */
 };
 console.log(isAnagram('djfsnriw','hpphkf')); */
 //odd-even
-function evenOrOdd(num){
+/* function evenOrOdd(num){
  return (num%2===0) ? 'Even':'Odd';
 }
-console.log(evenOrOdd(33))
+console.log(evenOrOdd(33)) */
+//century from year
+function century(year){
+  if(year % 100 ===0 ){
+    return year/100
+  }
+  if(year%100 !==0){
+    return Math.ceil(year/100)
+  }
+}
+console.log(century(1900))
