@@ -886,7 +886,12 @@ return false
 console.log(isPalindrom('aaaaabbbbaaaaa')) */
 
 //removeChar
-function removeChar(str){
+/* function removeChar(str){
   return str.slice(1, -1);
 }
-console.log(removeChar('Abba'))
+console.log(removeChar('Abba')) */
+//convert number to string
+function numberToString(num){
+  return num.toString()
+}
+console.log(numberToString(15))
