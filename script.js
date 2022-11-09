@@ -891,7 +891,14 @@ console.log(isPalindrom('aaaaabbbbaaaaa')) */
 }
 console.log(removeChar('Abba')) */
 //convert number to string
-function numberToString(num){
+/* function numberToString(num){
   return num.toString()
 }
-console.log(numberToString(15))
+console.log(numberToString(15)) */
+//A Strange Trip to the Market
+function isLockNessMonster(s) {
+  if(s.includes('3.50') || s.includes('three fifty') || s.includes('tree fiddy')) {
+    return true
+  }
+}
+console.log(isLockNessMonster('tree fiddy'))
