@@ -902,7 +902,20 @@ console.log(numberToString(15)) */
   }
 } */
 //another way
-function isLockNessMonster(s) {
+/* function isLockNessMonster(s) {
   return /tree fiddy|three fifty|3.50/.test(s);
 }
-console.log(isLockNessMonster('tree fiddy'))
+console.log(isLockNessMonster('tree fiddy')) */
+//anagram
+var isAnagram = function(test, original) {
+  if(test.length !== original.length) {
+    return false;
+  }
+  let a = test.toLowerCase().split('').sort().join('');
+  let b = original.toLowerCase().split('').sort().join('');
+  if(a === b) {
+    return true
+  }
+  return false
+};
+console.log(isAnagram('djfsnriw','hpphkf'));
