@@ -925,7 +925,7 @@ console.log(isAnagram('djfsnriw','hpphkf')); */
 }
 console.log(evenOrOdd(33)) */
 //century from year
-function century(year){
+/* function century(year){
   if(year % 100 ===0 ){
     return year/100
   }
@@ -933,4 +933,31 @@ function century(year){
     return Math.ceil(year/100)
   }
 }
-console.log(century(1900))
+console.log(century(1900)) */
+//common divisor
+function mygcd(x,y){
+  if ( y === 0) {
+    return x;
+    }
+    return mygcd(y, x % y);
+}
+console.log(mygcd(15, 5))
+
+/* function myPerfectFunction(){
+  console.log('Hi');
+  return 'Hello World'
+  console.log('Bye');
+} */
+//myPerfectFunction();
+//console.log(Math.floor(12.523145));
+let myPerfectFunction = function () {
+  console.log('Hi there');
+}
+myPerfectFunction = 'Let it be a string';
+//myPerfectFunction();
+ console.log(typeof(12.123456.toFixed(3)));
+//let multiplication = (first = 1, second = 2) => console.log(first*second);
+//multiplication();
+let multiplication = (first = 1, second = 2) => {first*second}
+console.log(multiplication(3, 5));
+
