@@ -1,4 +1,4 @@
-let friends = [{
+/* let friends = [{
   username: 'David',
   status: 'online',
   lastActivity: 10
@@ -37,6 +37,33 @@ for(let i = 0; i < friends.length; i++) {
 }
 }
 
-console.log(whosOnline(friends))
+console.log(whosOnline(friends)) */
 
 
+
+function numObj(s){
+  let res = {};
+  let arr = [];
+  for(let i = 0; i < s.length; i++) {
+    s[i] =  (String.fromCharCode(s[i])).toLowerCase();
+    console.log(s[i])
+    res = Object.assign({}, s[i])
+    arr.push(res)
+  }
+
+  return arr
+  /* let arr =[];
+  let res;
+  for(let i = 0; i < s.length; i++) {
+    if(s.length>0 && typeof  (s[i]  === 'number')){
+      let item = s[i];
+          res = {
+            s[i]: (String.fromCharCode(item)).toLowerCase()
+          }
+          arr.push(res)
+    }
+  }
+   */
+}
+
+console.log(numObj([65, 63, 74]))
