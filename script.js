@@ -175,3 +175,17 @@ function quickSort(arr){
 
 console.log(quickSort([1, 5, 0, 8, 10, -2, 5, 9]))
 console.log(count)
+
+function recursiveBinarySearch(array, item, start, end){
+  let middle = Math.floor((start - end)/2);
+  count +=1;
+  if(item===array[middle]){
+    return middle
+  }
+  if((item<array[middle])){
+    return recursiveBinarySearch(array, item, 0, middle-1)
+  } else {
+    return recursiveBinarySearch(array, item, middle+1, end)
+  }
+}
+console.log('hhhh', recursiveBinarySearch([1, 5, 6, 1, 0, 3], 0, 0, 6))
