@@ -67,7 +67,6 @@ function numObj(s){
 }
 
 console.log(numObj([65, 63, 74]))
-let count =0;
 function searchLinear (t, arr) {
 
   for(let i =0; i < arr.length; i++) {
@@ -81,13 +80,16 @@ function searchLinear (t, arr) {
 /* console.log(searchLinear(5, [1, 3, 6, 5, 8]))
 console.log(count)
  */
+let count =0;
 function binarySearch(arr, t){
   let start = 0;
   let end = arr.length;
   let middle;
   let found = false;
   let position = -1;
+
  while (found === false && start<=end) {
+  count = count +1;
   middle = Math.floor((start+end)/2);
   if(arr[middle] === t) {
     found = true;
@@ -100,6 +102,8 @@ function binarySearch(arr, t){
     start = middle+1
   }
  }
+
  return position;
 }
-console.log(binarySearch([5, 6, 7], 6))
+console.log(binarySearch([5, 6, 7], 7))
+console.log(count)
