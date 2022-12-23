@@ -67,8 +67,11 @@ function numObj(s){
 }
 
 console.log(numObj([65, 63, 74]))
+let count =0;
 function searchLinear (t, arr) {
+
   for(let i =0; i < arr.length; i++) {
+    count+=1;
     if(arr[i] === t) {
       return i
     }
@@ -76,3 +79,4 @@ function searchLinear (t, arr) {
   return null
 }
 console.log(searchLinear(5, [1, 3, 6, 5, 8]))
+console.log(count)
