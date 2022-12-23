@@ -142,3 +142,11 @@ function bubbleSort(arr) {
 }
 console.log(bubbleSort([1, 5, 8, 9]))
 console.log(count)
+
+function factorial(n){
+if(n === 1) {
+  return 1;
+}
+return n * factorial(n-1)
+}
+console.log(factorial(10))
