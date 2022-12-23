@@ -41,11 +41,11 @@ console.log(whosOnline(friends)) */
 
 
 
-function numObj(s){
+function numObj(s) {
   let res = {};
   let arr = [];
-  for(let i = 0; i < s.length; i++) {
-    s[i] =  (String.fromCharCode(s[i])).toLowerCase();
+  for (let i = 0; i < s.length; i++) {
+    s[i] = (String.fromCharCode(s[i])).toLowerCase();
     console.log(s[i])
     res = Object.assign({}, s[i])
     arr.push(res)
@@ -67,11 +67,11 @@ function numObj(s){
 }
 
 console.log(numObj([65, 63, 74]))
-function searchLinear (t, arr) {
+function searchLinear(t, arr) {
 
-  for(let i =0; i < arr.length; i++) {
-    count+=1;
-    if(arr[i] === t) {
+  for (let i = 0; i < arr.length; i++) {
+    count += 1;
+    if (arr[i] === t) {
       return i
     }
   }
@@ -80,49 +80,65 @@ function searchLinear (t, arr) {
 /* console.log(searchLinear(5, [1, 3, 6, 5, 8]))
 console.log(count)
  */
-let count =0;
-function binarySearch(arr, t){
+let count = 0;
+function binarySearch(arr, t) {
   let start = 0;
   let end = arr.length;
   let middle;
   let found = false;
   let position = -1;
 
- while (found === false && start<=end) {
-  count = count +1;
-  middle = Math.floor((start+end)/2);
-  if(arr[middle] === t) {
-    found = true;
-    position = middle;
-    return position;
+  while (found === false && start <= end) {
+    count = count + 1;
+    middle = Math.floor((start + end) / 2);
+    if (arr[middle] === t) {
+      found = true;
+      position = middle;
+      return position;
+    }
+    if (t < arr[middle]) {
+      end = middle - 1
+    } else {
+      start = middle + 1
+    }
   }
-  if(t<arr[middle]){
-    end=middle-1
-  } else {
-    start = middle+1
-  }
- }
 
- return position;
+  return position;
 }
 console.log(binarySearch([5, 6, 7], 7))
 console.log(count)
 
-function selectionSort(arr){
-  for(let i = 0; i<arr.length; i++){
+function selectionSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
     let indexMin = i;
-    for(let j = i+1; j<arr.length; j++){
-      if(arr[j]<arr[indexMin]) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[indexMin]) {
         indexMin = j;
       }
-      count +=1
+      count += 1
     }
     let temp = arr[i];
-    arr[i]=arr[indexMin];
+    arr[i] = arr[indexMin];
     arr[indexMin] = temp;
   }
   return arr;
 }
-let array =[1, 6, 8, 4, 3]
+let array = [1, 6, 8, 4, 3]
 console.log(selectionSort(array))
+console.log(count)
+
+function bubbleSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j + 1] < arr[j]) {
+        let temp = arr[j]
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp
+      }
+      count += 1;
+    }
+  }
+  return arr
+}
+console.log(bubbleSort([1, 5, 8, 9]))
 console.log(count)
