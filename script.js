@@ -107,3 +107,22 @@ function binarySearch(arr, t){
 }
 console.log(binarySearch([5, 6, 7], 7))
 console.log(count)
+
+function selectionSort(arr){
+  for(let i = 0; i<arr.length; i++){
+    let indexMin = i;
+    for(let j = i+1; j<arr.length; j++){
+      if(arr[j]<arr[indexMin]) {
+        indexMin = j;
+      }
+      count +=1
+    }
+    let temp = arr[i];
+    arr[i]=arr[indexMin];
+    arr[indexMin] = temp;
+  }
+  return arr;
+}
+let array =[1, 6, 8, 4, 3]
+console.log(selectionSort(array))
+console.log(count)
