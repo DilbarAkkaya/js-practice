@@ -80,7 +80,7 @@ function searchLinear(t, arr) {
 /* console.log(searchLinear(5, [1, 3, 6, 5, 8]))
 console.log(count)
  */
-let count = 0;
+/* let count = 0;
 function binarySearch(arr, t) {
   let start = 0;
   let end = arr.length;
@@ -106,8 +106,8 @@ function binarySearch(arr, t) {
   return position;
 }
 console.log(binarySearch([5, 6, 7], 7))
-console.log(count)
-
+console.log(count) */
+/* 
 function selectionSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     let indexMin = i;
@@ -125,9 +125,9 @@ function selectionSort(arr) {
 }
 let array = [1, 6, 8, 4, 3]
 console.log(selectionSort(array))
-console.log(count)
+console.log(count) */
 
-function bubbleSort(arr) {
+/* function bubbleSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
       if (arr[j + 1] < arr[j]) {
@@ -141,17 +141,17 @@ function bubbleSort(arr) {
   return arr
 }
 console.log(bubbleSort([1, 5, 8, 9]))
-console.log(count)
-
+console.log(count) */
+/* 
 function factorial(n){
 if(n === 1) {
   return 1;
 }
 return n * factorial(n-1)
 }
-console.log(factorial(10))
+console.log(factorial(10)) */
 
-function quickSort(arr){
+/* function quickSort(arr){
   if(arr.length<=1){
     return arr;
   }
@@ -171,9 +171,9 @@ function quickSort(arr){
     }
   }
   return [...quickSort(less), pivot, ...quickSort(greater)]
-}
+} */
 
-console.log(quickSort([1, 5, 0, 8, 10, -2, 5, 9]))
+/* console.log(quickSort([1, 5, 0, 8, 10, -2, 5, 9]))
 console.log(count)
 
 function recursiveBinarySearch(array, item, start, end){
@@ -188,4 +188,16 @@ function recursiveBinarySearch(array, item, start, end){
     return recursiveBinarySearch(array, item, middle+1, end)
   }
 }
-console.log('hhhh', recursiveBinarySearch([1, 5, 6, 1, 0, 3], 0, 0, 6))
+console.log('hhhh', recursiveBinarySearch([1, 5, 6, 1, 0, 3], 0, 0, 6)) */
+
+
+function User (name, id){
+  this.name = name;
+  this.id=id;
+  this.human=true;
+}
+
+const ivan = new User("Ivan", 25);
+const alex = new User("Alex", 30);
+console.log(ivan);
+console.log(alex);
