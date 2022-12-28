@@ -218,10 +218,17 @@ Point.distanceX = function (a,b){
   const delta = b.x-a.x;
   return Math.abs(delta);
 }
+Point.prototype.move = function(dx,dy){
+ this.x += dx;
+ this.y += dy;
+}
 
 const point1 = new Point(0,0);
 const point2 = new Point(4.5);
+point1.move(3, 2);
+console.log(point1);
 const dist = Point.distanceX(point1,point2);
+
 console.log(dist);
 
 class PointES6 {
