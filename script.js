@@ -208,3 +208,18 @@ const alex = new User("Alex", 30);
 console.log(ivan.hello());
 console.log(alex.hello());
 ivan.exit();
+
+function Point(x, y) {
+  this.x = x;
+  this.y = y;
+}
+
+Point.distanceX = function (a,b){
+  const delta = b.x-a.x;
+  return Math.abs(delta);
+}
+
+const point1 = new Point(0,0);
+const point2 = new Point(4.5);
+const dist = Point.distanceX(point1,point2);
+console.log(dist)
