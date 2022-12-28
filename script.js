@@ -222,4 +222,18 @@ Point.distanceX = function (a,b){
 const point1 = new Point(0,0);
 const point2 = new Point(4.5);
 const dist = Point.distanceX(point1,point2);
-console.log(dist)
+console.log(dist);
+
+class PointES6 {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  move(dx,dy) {
+    this.x += dx;
+    this.y += dy;
+  }
+}
+const point3 = new PointES6(3, 4);
+point3.move(5, 2);
+console.log(point3);
