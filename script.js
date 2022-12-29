@@ -252,8 +252,7 @@ this.str=str;
 }
 
 Base.prototype.plus = function(a){
-  this.str + a;
-  return this;
+  return this.str + a;
   }
 
 function StringBuilder (str, val){
@@ -262,6 +261,5 @@ this.val = val;
 }
 StringBuilder.prototype = Object.create(Base.prototype);
 StringBuilder.prototype.constructor = StringBuilder;
-const newString = new StringBuilder('', 'Hello');
-newString.plus('jhon')
+const newString = new StringBuilder('jjj', 'Hello');
 console.log(newString.plus('smith'));
