@@ -245,13 +245,23 @@ const point3 = new PointES6(3, 4);
 point3.move(5, 2);
 console.log(point3);
 
+
+
 function Base(str){
 this.str=str;
-this.plus = function(str1){
-return this.str + ' ' +str1
-}
 }
 
-const newString = new Base('Hello');
+Base.prototype.plus = function(a){
+  this.str + a;
+  return this;
+  }
+
+function StringBuilder (str, val){
+Base.call(this, str);
+this.val = val;
+}
+StringBuilder.prototype = Object.create(Base.prototype);
+StringBuilder.prototype.constructor = StringBuilder;
+const newString = new StringBuilder('', 'Hello');
 newString.plus('jhon')
 console.log(newString.plus('smith'));
