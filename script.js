@@ -244,3 +244,14 @@ class PointES6 {
 const point3 = new PointES6(3, 4);
 point3.move(5, 2);
 console.log(point3);
+
+function Base(str){
+this.str=str;
+this.plus = function(str1){
+return this.str + ' ' +str1
+}
+}
+
+const newString = new Base('Hello');
+newString.plus('jhon')
+console.log(newString.plus('smith'));
