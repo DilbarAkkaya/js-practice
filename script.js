@@ -191,7 +191,7 @@ function recursiveBinarySearch(array, item, start, end){
 console.log('hhhh', recursiveBinarySearch([1, 5, 6, 1, 0, 3], 0, 0, 6)) */
 
 
-function User (name, id){
+/* function User (name, id){
   this.name = name;
   this.id=id;
   this.human=true;
@@ -262,4 +262,14 @@ this.val = val;
 StringBuilder.prototype = Object.create(Base.prototype);
 StringBuilder.prototype.constructor = StringBuilder;
 const newString = new StringBuilder('jjj', 'Hello');
-console.log(newString.plus('smith'));
+console.log(newString.plus('smith')); */
+
+function Product (name, price){
+  this.name=name;
+  this.price = price;
+}
+function Food(name,price){
+  Product.call(this, name,price);
+  this.category = 'food';
+}
+console.log(new Food('cheese', 5).name);
