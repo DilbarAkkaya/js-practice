@@ -330,3 +330,20 @@ Object.setPrototypeOf(person, prototype);
 
 delete person.firstName;
 console.log(person.firstName); //daniel
+
+function Base(str){
+  this.str=str;
+  }
+  
+  Base.prototype.plus = function(a){
+    return this.str + a;
+    }
+  
+  function StringBuilder (str, val){
+  Base.call(this, str);
+  this.val = val;
+  }
+  StringBuilder.prototype = Object.create(Base.prototype);
+  StringBuilder.prototype.constructor = StringBuilder;
+  const newString = new StringBuilder('jjj', 'Hello');
+  console.log(newString.__proto__)
