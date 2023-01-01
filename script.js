@@ -302,7 +302,7 @@ Object.setPrototypeOf(person, prototype);
 delete person.getFullName;
 console.log(person.getFullName()); //elvis presley */
 
-const person = {
+/* const person = {
   firstName: 'Elvis',
   lastName: 'Presley',
 };
@@ -314,4 +314,19 @@ const prototype = {
 };
 Object.setPrototypeOf(person, prototype);
 console.log(person.firstName); //elvis
+delete person.firstName; */
+
+const person = {
+  firstName: 'Elvis',
+  lastName: 'Presley',
+};
+const prototype = {
+  firstName: 'Daniel',
+  getFullName(){
+    return `${this.firstName} ${this.lastName}`;
+  }
+};
+Object.setPrototypeOf(person, prototype);
+
 delete person.firstName;
+console.log(person.firstName); //daniel
