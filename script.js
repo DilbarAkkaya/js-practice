@@ -273,3 +273,16 @@ function Food(name,price){
   this.category = 'food';
 }
 console.log(new Food('cheese', 5).name);
+const person = {
+  firstName: 'Elvis',
+  lastName: 'Presley',
+};
+const prototype = {
+  firstName: 'Daniel',
+  getFullName(){
+    return `${this.firstName} ${this.lastName}`;
+  }
+};
+Object.setPrototypeOf(person, prototype);
+person.age = 100;
+console.log(prototype.age); //undefined
