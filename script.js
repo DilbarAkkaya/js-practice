@@ -316,7 +316,7 @@ Object.setPrototypeOf(person, prototype);
 console.log(person.firstName); //elvis
 delete person.firstName; */
 
-const person = {
+/* const person = {
   firstName: 'Elvis',
   lastName: 'Presley',
 };
@@ -346,4 +346,16 @@ function Base(str){
   StringBuilder.prototype = Object.create(Base.prototype);
   StringBuilder.prototype.constructor = StringBuilder;
   const newString = new StringBuilder('jjj', 'Hello');
-  console.log(newString.__proto__)
+  console.log(newString.__proto__) */
+
+  let user = {
+    name: 'John',
+    age: 35,
+    isAdmin: true,
+  }
+  let infoName = Object.getOwnPropertyDescriptor(user, 'name');
+  let infoAge = Object.getOwnPropertyDescriptor(user, 'age');
+  let infoIsAdmin = Object.getOwnPropertyDescriptor(user, 'isAdmin');
+  console.log(infoName);
+  console.log(infoAge);
+  console.log(infoIsAdmin);
