@@ -359,3 +359,17 @@ function Base(str){
   console.log(infoName);
   console.log(infoAge);
   console.log(infoIsAdmin);
+
+  let defineAdmin = Object.defineProperty({}, 'name', {
+    value: 'Alex',
+    writable: true,
+    configurable: false,
+  })
+  console.log(defineAdmin)
+  let infoAdmin = Object.getOwnPropertyDescriptor(defineAdmin, 'name');
+  console.log(infoAdmin)
+  Object.defineProperty(defineAdmin, 'age', {
+    value: '28',
+    enumerable: true,
+  });
+    console.log(defineAdmin);
