@@ -363,7 +363,7 @@ function Base(str){
   let defineAdmin = Object.defineProperty({}, 'name', {
     value: 'Alex',
     writable: true,
-    configurable: false,
+    configurable: true,
   })
   console.log(defineAdmin)
   let infoAdmin = Object.getOwnPropertyDescriptor(defineAdmin, 'name');
@@ -371,5 +371,19 @@ function Base(str){
   Object.defineProperty(defineAdmin, 'age', {
     value: '28',
     enumerable: true,
+    configurable:true,
   });
     console.log(defineAdmin);
+
+  Object.defineProperties(defineAdmin, {
+    name: {value: 'Mark', writable: true, configurable: true},
+    age: {value: 25, enumerable: true},
+    isMaried: {value: false, writable: true}
+  })
+  console.log(defineAdmin);
+
+  let employer = Object.defineProperties({}, {
+    name: {value: 'Anna', writable: true, enumerable: true, configurable: true},
+    age : {value: 40, writable: true, enumerable: true, configurable: true} 
+  })
+  console.log(employer)
