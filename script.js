@@ -397,4 +397,14 @@ function Base(str){
   })
   console.log(employer);
     let clone = Object.defineProperties({}, Object.getOwnPropertyDescriptors(employer));
-  console.log(clone);
+/*     Object.preventExtensions(clone);
+    Object.defineProperty(clone, 'aaa', {
+      value: 'bbbb', writable: true
+    }) */
+    Object.seal(clone);
+/*         Object.defineProperty(clone, 'aaa', {
+      value: 'bbbb', writable: true
+    }) */
+    delete clone.name;
+    let nameDescr = Object.getOwnPropertyDescriptor(clone, 'name')
+  console.log(nameDescr);
