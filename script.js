@@ -386,4 +386,13 @@ function Base(str){
     name: {value: 'Anna', writable: true, enumerable: true, configurable: true},
     age : {value: 40, writable: true, enumerable: true, configurable: true} 
   })
-  console.log(employer)
+
+
+  Object.defineProperty(employer, 'isMarried', {
+    value: true, writable:true
+  })
+  Object.defineProperties(employer, {
+    address: {value: 'London', writable: true, enumerable: true},
+    children: {value: 2, writable: true}
+  })
+    console.log(employer)
