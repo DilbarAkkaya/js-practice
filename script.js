@@ -395,4 +395,6 @@ function Base(str){
     address: {value: 'London', writable: true, enumerable: true},
     children: {value: 2, writable: true}
   })
-    console.log(employer)
+  console.log(employer);
+    let clone = Object.defineProperties({}, Object.getOwnPropertyDescriptors(employer));
+  console.log(clone);
