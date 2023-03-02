@@ -486,3 +486,6 @@ let obj = {
 }
 let cloneObj = {...obj};
 console.log(cloneObj)
+
+let cloneAssign = Object.assign(obj);
+console.log(cloneAssign)
