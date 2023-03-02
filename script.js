@@ -471,4 +471,11 @@ let newCloneSlice = numbers.slice();
 console.log(newCloneSlice);
 let newCloneConcat = numbers.concat([]);
 console.log(newCloneConcat);
-let newCloneFrom = Array.from(arr);
+let newCloneFrom = Array.from(numbers);
+let newCloneDeep = JSON.parse(JSON.stringify(numbers));
+let nested = [['a', 'b'], ['c', 'd']]
+let newCloneDeepMulti = JSON.parse(JSON.stringify(nested))
+console.log(newCloneDeepMulti);
+newCloneDeepMulti.push(['e'])
+console.log(newCloneDeepMulti);
+console.log(nested)
