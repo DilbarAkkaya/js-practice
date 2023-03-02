@@ -453,4 +453,10 @@ function Base(str){
   }
   let i = 0;
 while(++i<numbers.length) {
+  numbersCopyLoop[i] = numbers[i];
 }
+let newClone = numbers.map((x)=> x);
+console.log(newClone)
+numbers.push(6);
+console.log(newClone)
+console.log(numbers)
