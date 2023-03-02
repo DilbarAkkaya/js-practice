@@ -487,5 +487,8 @@ let obj = {
 let cloneObj = {...obj};
 console.log(cloneObj)
 
-let cloneAssign = Object.assign(obj);
-console.log(cloneAssign)
+let cloneAssign = Object.assign({}, obj);
+console.log(cloneAssign);
+
+let cloneDeepObj = JSON.parse(JSON.stringify(obj));
+console.log(cloneDeepObj);
