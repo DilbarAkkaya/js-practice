@@ -432,6 +432,18 @@ function Base(str){
       }
     }
   }
-  for (let num of range) {
+/*   for (let num of range) {
   
-  }
+  } */
+
+  let numbers = [1, 2, 3, 4, 5];
+  let numCopy = [...numbers];
+  console.log(numCopy);
+  numCopy.push(6);
+  console.log(numCopy);
+  let nestedArr = [[1, 2], [3, 4]];
+  let nestedCopy = [...nestedArr];
+  console.log(nestedCopy);
+  nestedCopy[0].push(300);
+  console.log(nestedArr);
+  console.log(nestedCopy);
