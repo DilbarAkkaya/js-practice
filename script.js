@@ -466,4 +466,6 @@ let newCloneReduce = numbers.reduce((newarr, el) => {
   newarr.push(el);
   return newarr;
 }, []);
-console.log(newCloneReduce)
+console.log(newCloneReduce);
+let newCloneSlice = numbers.slice();
+console.log(newCloneSlice)
