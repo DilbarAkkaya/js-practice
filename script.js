@@ -460,3 +460,5 @@ console.log(newClone)
 numbers.push(6);
 console.log(newClone)
 console.log(numbers)
+let newCloneFilter = numbers.filter(()=>true);
+console.log(newCloneFilter)
