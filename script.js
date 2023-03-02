@@ -492,3 +492,6 @@ console.log(cloneAssign);
 
 let cloneDeepObj = JSON.parse(JSON.stringify(obj));
 console.log(cloneDeepObj);
+
+let flatten = nested.flat(Infinity);
+console.log(flatten)
