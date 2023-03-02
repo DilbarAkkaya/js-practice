@@ -479,3 +479,10 @@ console.log(newCloneDeepMulti);
 newCloneDeepMulti.push(['e'])
 console.log(newCloneDeepMulti);
 console.log(nested)
+
+let obj = {
+  name: 'Jhon',
+  age: 40,
+}
+let cloneObj = {...obj};
+console.log(cloneObj)
