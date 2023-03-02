@@ -462,3 +462,8 @@ console.log(newClone)
 console.log(numbers)
 let newCloneFilter = numbers.filter(()=>true);
 console.log(newCloneFilter)
+let newCloneReduce = numbers.reduce((newarr, el) => {
+  newarr.push(el);
+  return newarr;
+}, []);
+console.log(newCloneReduce)
