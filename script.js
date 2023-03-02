@@ -447,3 +447,10 @@ function Base(str){
   nestedCopy[0].push(300);
   console.log(nestedArr);
   console.log(nestedCopy);
+  let numbersCopyLoop = [];
+  for (let i = 0; i < numbers.length; i++){
+    numbersCopyLoop[i] = numbers[i];
+  }
+  let i = 0;
+while(++i<numbers.length) {
+}
