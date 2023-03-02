@@ -468,4 +468,7 @@ let newCloneReduce = numbers.reduce((newarr, el) => {
 }, []);
 console.log(newCloneReduce);
 let newCloneSlice = numbers.slice();
-console.log(newCloneSlice)
+console.log(newCloneSlice);
+let newCloneConcat = numbers.concat([]);
+console.log(newCloneConcat);
+let newCloneFrom = Array.from(arr);
