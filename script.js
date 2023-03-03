@@ -530,3 +530,10 @@ function sortArr(arr){
     return arr
 }
 console.log(sortArr([1, 3, 2, 7, 4]))
+
+function compare(a,b) {
+  if (a < b) return -1;
+  if (a > b) return 1;
+  return 0
+}
+console.log([1, 5, 8, 3].sort(compare))
