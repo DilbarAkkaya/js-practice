@@ -494,4 +494,19 @@ let cloneDeepObj = JSON.parse(JSON.stringify(obj));
 console.log(cloneDeepObj);
 
 let flatten = nested.flat(Infinity);
-console.log(flatten)
+console.log(flatten);
+
+function flattenArr(arr) {
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++) {
+    if(Array.isArray(arr[i])) {
+      for(let j=0;j<arr[i].length; j++)
+      newArr = [...newArr, arr[i][j]];
+    }else {
+    newArr = [...newArr, arr[i]];
+    }
+  }
+  return newArr;
+}
+
+console.log(flattenArr([[1, 2], [3, 4, 5], 6]))
