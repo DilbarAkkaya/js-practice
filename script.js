@@ -537,3 +537,11 @@ function compare(a,b) {
   return 0
 }
 console.log([1, 5, 8, 3].sort(compare))
+let number = 5; debugger
+
+function logNumber() {
+  let number = 4; debugger
+  console.log(number);
+}
+number = 6;
+logNumber(); debugger
