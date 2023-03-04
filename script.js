@@ -537,11 +537,27 @@ function compare(a,b) {
   return 0
 }
 console.log([1, 5, 8, 3].sort(compare))
-let number = 5; debugger
+let number = 5; 
 
 function logNumber() {
-  let number = 4; debugger
+  let number = 4; 
   console.log(number);
 }
 number = 6;
-logNumber(); debugger
+logNumber(); 
+
+function createCounter() {
+  let counter = 0;
+  const myFunc = function() {
+    counter = counter + 1;
+    return counter;
+  }
+  return myFunc;
+}
+
+const increment  = createCounter();
+console.log(increment)
+const c1 = increment();
+const c2 = increment();
+const c3 = increment();
+console.log(c1, c2, c3)
