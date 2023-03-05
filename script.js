@@ -600,3 +600,9 @@ for (let [budget, shop] of map.entries()) {
 map.forEach((item, i, map) => {
   console.log(item, i)
 })
+
+const arrNum = [1, 1, 3, 55, 55, 9];
+const set = new Set(arrNum);
+set.add(9);
+set.add(6)
+console.log(set);
