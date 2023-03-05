@@ -568,6 +568,35 @@ const shops = [
   {bread: 50}
 ];
 
+const budget = [5000, 1000, 10000]
 const map = new Map();
-map.set(shops[0], 5000)
-console.log(map)
+shops.forEach((shop,i) => {
+  map.set(shop, budget[i]);
+})
+console.log(map);
+console.log(map.get(shops[0]));
+console.log(map.has(shops[0]));
+/* map.delete(shops[2]);
+//map.clear();
+map.size
+console.log(map.size) */
+const goods = [];
+for (let shop of map.keys()){
+  goods.push(Object.keys(shop)[0])
+}
+console.log(goods)
+
+const bujetsSum = [];
+for (let price of map.values()) {
+  console.log(price)
+  bujetsSum.push(price)
+}
+console.log(bujetsSum)
+
+for (let [budget, shop] of map.entries()) {
+  console.log(budget, shop)
+}
+
+map.forEach((item, i, map) => {
+  console.log(item, i)
+})
