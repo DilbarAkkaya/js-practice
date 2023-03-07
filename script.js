@@ -634,7 +634,10 @@ const objThis = {
   a: 5,
   b: 2,
   sum: function(){
-    console.log(this);
+    function shout(){
+      console.log(this);
+    }
+shout()
   }
 }
 objThis.sum()
