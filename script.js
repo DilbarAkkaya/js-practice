@@ -629,3 +629,12 @@ function showThis(a, b){
   console.log(sum())
 }
 showThis(4, 5)
+
+const objThis = {
+  a: 5,
+  b: 2,
+  sum: function(){
+    console.log(this);
+  }
+}
+objThis.sum()
