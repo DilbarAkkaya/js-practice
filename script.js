@@ -1,3 +1,4 @@
+'use strict';
 /* let friends = [{
   username: 'David',
   status: 'online',
@@ -405,7 +406,7 @@ function Base(str){
 /*         Object.defineProperty(clone, 'aaa', {
       value: 'bbbb', writable: true
     }) */
-    delete clone.name;
+   // delete clone.name;
     let nameDescr = Object.getOwnPropertyDescriptor(clone, 'name')
   console.log(nameDescr);
 
@@ -606,3 +607,25 @@ const set = new Set(arrNum);
 set.add(9);
 set.add(6)
 console.log(set);
+
+function showName() {
+/*   console.log(arguments.length);
+  console.log(arguments[0]);
+  console.log(arguments[1]); */
+  for (let arg of arguments) {
+    console.log(arg)
+  }
+}
+showName('Yulia', 'Ilya')
+
+console.log(this);
+
+function showThis(a, b){
+  console.log(this);
+  function sum() {
+    console.log(this);
+    return a + b;
+  }
+  console.log(sum())
+}
+showThis(4, 5)
