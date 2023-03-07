@@ -651,3 +651,21 @@ function User(name,id){
 }
 let ivan = new User('Ivan', 23)
 console.log(ivan.hello())
+
+function sayName(surname){
+  console.log(this);
+  console.log(this.name +surname);
+}
+
+const userName = {
+  name: 'John'
+}
+sayName.call(userName, 'smith');
+sayName.apply(userName, ['smith']);
+
+function count(num) {
+  return this*num;
+}
+
+const double = count.bind(2)
+console.log(double(3))
