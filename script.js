@@ -746,3 +746,16 @@ return result;
 }
 Array.prototype.myFlat = myFlat;
 console.log(arrFlat.myFlat())
+
+function objCreate(proto){
+  function F(){};
+  F.prototype = proto;
+  return new F();
+}
+const a = {
+  x: 10,
+  y: 20,
+}
+
+const b = objCreate(a);
+console.log(b.x)
