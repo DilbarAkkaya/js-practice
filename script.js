@@ -678,7 +678,7 @@ let userIvan = {
   name: 'Ivan',
   age: 28,
   sayHi(){
-    alert(`Hi, ${this.name}`);
+    console.log(`Hi, ${this.name}`);
   }
 }
 /* setTimeout(function(){
@@ -689,4 +689,6 @@ function func() {
   console.log(`Hi, ${this.name}`);
 }
 let funcUserIvan = func.bind(userIvan);
-funcUserIvan()
+//funcUserIvan()
+let userIvanMethod = userIvan.sayHi.bind(userIvan);
+userIvanMethod()
