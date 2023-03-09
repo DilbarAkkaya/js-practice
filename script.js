@@ -758,4 +758,13 @@ const a = {
 }
 
 const b = objCreate(a);
-console.log(b.x)
+console.log(b.x);
+
+function repeating(str, n) {
+  let res = '';
+  for (let i = 0; i< n; i++) {
+    res += str;
+  }
+  return res;
+}
+console.log(repeating('hello', 3))
