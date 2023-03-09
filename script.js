@@ -663,9 +663,24 @@ const userName = {
 sayName.call(userName, 'smith');
 sayName.apply(userName, ['smith']);
 
-function count(num) {
+/* function count(num) {
   return this*num;
 }
 
 const double = count.bind(2)
 console.log(double(3))
+
+!function() {
+  alert("Hello from IIFE!");
+}(); */
+
+let userIvan = {
+  name: 'Ivan',
+  age: 28,
+  sayHi(){
+    alert(`Hi, ${this.name}`);
+  }
+}
+setTimeout(function(){
+  userIvan.sayHi()
+}, 5000);
