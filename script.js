@@ -707,3 +707,23 @@ function sum(a, b) {
 
 let currySum = curry(sum);
 console.log(currySum(1)(2))
+
+class Users {
+  constructor(name) {
+    this.name = name;
+  }
+  get name() {
+    return this._name;
+  }
+  set name(value){
+    if (value.length < 4) {
+      alert ("bvz hy")
+      return;
+    }
+    this._name = value;
+  }
+}
+
+let userDima = new Users('Dima');
+alert(userDima.name);
+userDima= new Users('')
