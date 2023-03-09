@@ -685,7 +685,7 @@ let userIvan = {
   userIvan.sayHi()
 }, 5000); */
 
-function func() {
+/* function func() {
   console.log(`Hi, ${this.name}`);
 }
 let funcUserIvan = func.bind(userIvan);
@@ -726,4 +726,23 @@ class Users {
 
 let userDima = new Users('Dima');
 alert(userDima.name);
-userDima= new Users('')
+userDima= new Users('') */
+
+const arrFlat = [1, 2, 3, [2, 5]];
+//console.log(arrFlat.myFlat());
+function myFlat() {
+  const result = [];
+  function getFlatten(arr) {
+    for(let i = 0; i <arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      getFlatten(arr[i])
+    } else {
+      result.push(arr[i])
+    }
+    }
+  }
+getFlatten(this);
+return result;
+}
+Array.prototype.myFlat = myFlat;
+console.log(arrFlat.myFlat())
