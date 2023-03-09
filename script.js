@@ -681,6 +681,12 @@ let userIvan = {
     alert(`Hi, ${this.name}`);
   }
 }
-setTimeout(function(){
+/* setTimeout(function(){
   userIvan.sayHi()
-}, 5000);
+}, 5000); */
+
+function func() {
+  console.log(`Hi, ${this.name}`);
+}
+let funcUserIvan = func.bind(userIvan);
+funcUserIvan()
