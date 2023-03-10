@@ -777,3 +777,10 @@ function myBind(){
 }
 let logName = myBind.bind(person)
 logName()
+
+Function.prototype.myBind = function(context, ...outerArgs){
+  const fn = this;
+  return function(...args){
+    return fn.apply(context, [...outerArgs, ...args]);  
+  }
+}
