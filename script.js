@@ -793,4 +793,11 @@ function myBindES6(fn, context, ...rest){
 function printName(age){
   console.log(this.firstName + this.firstName + age)
 }
-myBindES6(printName, person, 25)()
+myBindES6(printName, person, 25)();
+
+function muBindES6Concat(fn, context, ...rest){
+  return function(...args){
+    return fn.apply(context, rest.concat(args));
+  }
+}
+muBindES6Concat(printName, person, 40)()
