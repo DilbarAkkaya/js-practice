@@ -768,3 +768,12 @@ function repeating(str, n) {
   return res;
 }
 console.log(repeating('hello', 3))
+
+let person = {
+  firstName: 'jhon',
+}
+function myBind(){
+  console.log(this.firstName)
+}
+let logName = myBind.bind(person)
+logName()
