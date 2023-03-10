@@ -800,4 +800,30 @@ function muBindES6Concat(fn, context, ...rest){
     return fn.apply(context, rest.concat(args));
   }
 }
-muBindES6Concat(printName, person, 40)()
+muBindES6Concat(printName, person, 40)();
+
+function makeNum(num, fn){
+  return fn ? fn(num) : num;
+}
+function five(fn){
+  return makeNum(5, fn);
+}
+function seven(fn){
+  return makeNum(7, fn);
+}
+function three(fn){
+  return makeNum(3, fn);
+}
+
+function plus(right) {
+  return function(left) {
+    return left + right;
+  }
+}
+ function minus(right){
+  return function(left) {
+    return left -right;
+  }
+ }
+
+console.log(five(plus(seven(minus(three())))));
