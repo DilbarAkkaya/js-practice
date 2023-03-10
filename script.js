@@ -784,3 +784,13 @@ Function.prototype.myBind = function(context, ...outerArgs){
     return fn.apply(context, [...outerArgs, ...args]);  
   }
 }
+
+function myBindES6(fn, context, ...rest){
+  return function(...args){
+    return fn.apply(context, [...rest, ...args])
+  }
+}
+function printName(age){
+  console.log(this.firstName + this.firstName + age)
+}
+myBindES6(printName, person, 25)()
