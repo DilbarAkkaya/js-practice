@@ -827,3 +827,13 @@ function plus(right) {
  }
 
 console.log(five(plus(seven(minus(three())))));
+
+class MyElement extends HTMLElement {
+  constructor() { super();  }
+  connectedCallback() { /}
+  disconnectedCallback() { }
+  static get observedAttributes() { return []; }
+  attributeChangedCallback(name, oldValue, newValue) { }
+  adoptedCallback() {  }
+ }
+customElements.define('my-element', MyElement);
