@@ -861,3 +861,36 @@ let cloneA = {};
 Object.assign(cloneA, student)
 console.log(cloneA);
 console.log(cloneA.sizes === student.sizes);
+cloneA.prop = 'lkfldkf'
+console.log(cloneA)
+console.log(student)
+console.dir([1, 2, 3])
+
+const soldier = {
+  health: 400,
+  armor: 100,
+}
+const john ={
+  health: 200,
+}
+
+//john.__proto__= soldier;
+//Object.setPrototypeOf(john, soldier)
+
+const adam = Object.create(soldier)
+console.log(adam.armor);
+
+function Student(name, id){
+  this.name = name,
+  this.id=id,
+  this.sayHi = function() {
+    console.log(`Hello, ${this.name}`)
+  }
+}
+const yulia = new Student('Yulia', 28);
+console.log(yulia);
+yulia.sayHi();
+Student.prototype.exit = function() {
+  console.log(`Good bye, ${this.name}`)
+}
+yulia.exit()
