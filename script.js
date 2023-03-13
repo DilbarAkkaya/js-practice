@@ -828,7 +828,7 @@ function plus(right) {
 
 console.log(five(plus(seven(minus(three())))));
 
-class MyElement extends HTMLElement {
+/* class MyElement extends HTMLElement {
   constructor() { super();  }
   connectedCallback() { /}
   disconnectedCallback() { }
@@ -836,4 +836,28 @@ class MyElement extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) { }
   adoptedCallback() {  }
  }
-customElements.define('my-element', MyElement);
+customElements.define('my-element', MyElement); */
+
+
+const student = {
+  name: 'Anna',
+  age: 25,
+  isActive: true,
+}
+let key = 'age';
+console.log('age' in student)
+console.log(key in student)
+console.log(student.prop)
+for(let key in student){
+  console.log(key)
+}
+
+const cloneStudent = {};
+for(let prop in student) {
+  cloneStudent[prop] = student[prop]
+}
+console.log(cloneStudent);
+let cloneA = {};
+Object.assign(cloneA, student)
+console.log(cloneA);
+console.log(cloneA.sizes === student.sizes);
