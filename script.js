@@ -928,4 +928,15 @@ function curry(f) {
 
 let carriedAdd = curry(add);
 console.log(carriedAdd(5)(9)(-4)(1));
-console.log(add(5, 9, -4, 1))
+console.log(add(5, 9, -4, 1));
+
+// periodOutput(100) -> 100(after 100 ms), 200(after 100 ms), 300(after 100 ms)
+
+function periodOutput(period) {
+  let i = 0;
+  setInterval(()=>{
+    i += period;
+    console.log(`${i}(after 100 ms)`)
+  }, period)
+}
+//periodOutput(100)
