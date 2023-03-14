@@ -894,3 +894,10 @@ Student.prototype.exit = function() {
   console.log(`Good bye, ${this.name}`)
 }
 yulia.exit()
+
+//myFunc('!', 4, -10, 34, 0) -> '4!-10!34!0`. How to implement?
+function myConcat(separator) {
+  const args = Array.prototype.slice.call(arguments, 1);
+  return args.join(separator);
+}
+console.log(myConcat('!', 4, -10, 34, 0));
