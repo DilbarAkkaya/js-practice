@@ -900,4 +900,12 @@ function myConcat(separator) {
   const args = Array.prototype.slice.call(arguments, 1);
   return args.join(separator);
 }
+function myConcat1(separator) {
+  let argsArr = [...arguments];
+  console.log(argsArr)
+  const args = argsArr.slice(1);
+  console.log(args)
+  return args.join(separator);
+}
+console.log(myConcat1('!', 4, -10, 34, 0));
 console.log(myConcat('!', 4, -10, 34, 0));
