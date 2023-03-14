@@ -909,3 +909,23 @@ function myConcat1(separator) {
 }
 console.log(myConcat1('!', 4, -10, 34, 0));
 console.log(myConcat('!', 4, -10, 34, 0));
+//add(5)(9)(-4)(1) -> 11. How to implement?
+function add(a, b, c, d){
+  return a + b + c + d
+}
+
+function curry(f) {
+  return function(a) {
+    return function(b) {
+      return function(c) {
+        return function(d){
+          return f(a, b, c, d);
+        };
+      };
+    };
+  };
+};
+
+let carriedAdd = curry(add);
+console.log(carriedAdd(5)(9)(-4)(1));
+console.log(add(5, 9, -4, 1))
