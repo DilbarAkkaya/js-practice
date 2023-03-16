@@ -961,5 +961,7 @@ console.log(Object.getPrototypeOf(yulia));
 console.log(Object.getPrototypeOf(soldier));
 Object.setPrototypeOf(objWithoutProt, Student);
 console.log(Object.getPrototypeOf(objWithoutProt));
-let dima = Object.create(Student, {name: {value: 'Dima', writable: false}});
-console.log(dima.name = 'Yana')
+let dima = Object.create(Student, {name: {value: 'Dima', writable: true}});
+console.log(dima.name = 'Yana');
+Object.setPrototypeOf(dima, soldier);
+console.log(Object.getPrototypeOf(dima))
