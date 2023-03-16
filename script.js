@@ -940,3 +940,26 @@ function periodOutput(period) {
   }, period)
 }
 //periodOutput(100)
+console.log(soldier.__proto__)
+console.log(soldier.prototype)
+let age = 18;
+let arr =[];
+let arr1 = [];
+console.log(age.__proto__=== Student.prototype);
+console.log(arr.__proto__ === arr1.__proto__)
+console.log(arr.__proto__)
+console.log(arr1.__proto__)
+console.log(age.prototype)
+console.log(Object.getPrototypeOf(age));
+let objWithoutProt = Object.create(null);
+objWithoutProt.__proto__= "test";
+objWithoutProt.name = "Yana";
+console.log(objWithoutProt);
+//alert(objWithoutProt)
+console.log(Object.getPrototypeOf(objWithoutProt))
+console.log(Object.getPrototypeOf(yulia));
+console.log(Object.getPrototypeOf(soldier));
+Object.setPrototypeOf(objWithoutProt, Student);
+console.log(Object.getPrototypeOf(objWithoutProt));
+let dima = Object.create(Student, {name: {value: 'Dima', writable: false}});
+console.log(dima.name = 'Yana')
