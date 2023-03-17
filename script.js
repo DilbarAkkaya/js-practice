@@ -980,9 +980,10 @@ console.log(teacher.fullName = 'Alice Cooper');
 console.log(teacher.fullName = 'John Smith');
 
 class Animal {
-  constructor(name){
+  constructor(name, age){
     this.speed = 0,
     this.name = name;
+    this.age = age
   }
   run (speed){
     this.speed = speed;
@@ -1006,3 +1007,9 @@ let rabbit = new Rabbit('white rabbit');
 console.log(rabbit);
 console.log(rabbit.hide());
 console.log(rabbit.run(30));
+console.log(Object.keys(animal));
+for(let key in rabbit) {
+  console.log(key)
+}
+console.log(Object.values(animal));
+console.log(Object.entries(animal));
