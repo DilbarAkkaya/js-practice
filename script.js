@@ -1013,3 +1013,23 @@ for(let key in rabbit) {
 }
 console.log(Object.values(animal));
 console.log(Object.entries(animal));
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+let setFromValues = new Set(values);
+console.log(setFromValues);
+console.log(setFromValues.has('Hare'));
+console.log(setFromValues.keys());
+console.log(setFromValues.values());
+console.log(setFromValues.entries());
+for(let value of setFromValues) {
+  console.log(value)
+}
+setFromValues.forEach((value, valueAgaing, set) => {
+  console.log(value, valueAgaing)
+});
+function unigue(arr){
+  return Array.from(new Set(arr));
+}
+
+console.log(unigue(values));
