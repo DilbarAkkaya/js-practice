@@ -978,3 +978,31 @@ let teacher = {
 }
 console.log(teacher.fullName = 'Alice Cooper');
 console.log(teacher.fullName = 'John Smith');
+
+class Animal {
+  constructor(name){
+    this.speed = 0,
+    this.name = name;
+  }
+  run (speed){
+    this.speed = speed;
+    console.log(`${this.name} runs with speed ${this.speed}`)
+  }
+  stop(){
+    this.speed = 0,
+    console.log(`${this.name} stopped`)
+  }
+}
+
+let animal = new Animal("My animal");
+console.log(animal);
+console.log(animal.run(20));
+class Rabbit extends Animal {
+hide(){
+  console.log(`${this.name} hides`);
+}
+}
+let rabbit = new Rabbit('white rabbit');
+console.log(rabbit);
+console.log(rabbit.hide());
+console.log(rabbit.run(30));
