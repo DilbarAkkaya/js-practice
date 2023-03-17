@@ -964,4 +964,17 @@ console.log(Object.getPrototypeOf(objWithoutProt));
 let dima = Object.create(Student, {name: {value: 'Dima', writable: true}});
 console.log(dima.name = 'Yana');
 Object.setPrototypeOf(dima, soldier);
-console.log(Object.getPrototypeOf(dima))
+console.log(Object.getPrototypeOf(dima));
+
+let teacher = {
+  name: 'Ivan',
+  surname: 'Ivanov',
+  get fullName(){
+    return `${this.name} ${this.surname}`
+  },
+  set fullName(value) {
+    [this.name, this.surname] = value.split(' ')
+  }
+}
+console.log(teacher.fullName = 'Alice Cooper');
+console.log(teacher.fullName = 'John Smith');
