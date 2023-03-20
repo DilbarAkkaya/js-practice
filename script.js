@@ -1123,3 +1123,19 @@ const animalNew = {
 
 let panda = objCreate(animalNew);
 console.log(panda);
+
+Array.prototype.myOwnFlat = function(){
+  let result = [];
+  function getFlat(arr) {
+    for(let i = 0; i<arr.length; i++) {
+      if(Array.isArray(arr[i])) {
+        getFlat(arr[i])
+      } else {
+        result.push(arr[i])
+      }
+    }
+  }
+  getFlat(this);
+  return result;
+}
+console.log(['a', 'b', 'c', [1, 2, 3], [[66, 88, 99]]].myOwnFlat())
