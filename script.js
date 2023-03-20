@@ -1095,3 +1095,31 @@ function logArgs(first, city){
 
 let newFunc = logArgs.myBindWithArgs(objForBind, 5555);
 newFunc('hhhhhhhhhhhhhhhn')
+
+/* function objCreate(proto){
+  function F(){};
+  F.prototype = proto;
+  return new F();
+}
+const a = {
+  x: 10,
+  y: 20,
+}
+
+const b = objCreate(a);
+console.log(b.x); */
+
+
+function objPoly(proto){
+  function F(){};
+  F.prototype = proto;
+  return new F()
+}
+
+const animalNew = {
+  vegetar: true,
+  speed: 40,
+}
+
+let panda = objCreate(animalNew);
+console.log(panda);
