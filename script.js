@@ -1139,3 +1139,10 @@ Array.prototype.myOwnFlat = function(){
   return result;
 }
 console.log(['a', 'b', 'c', [1, 2, 3], [[66, 88, 99]]].myOwnFlat())
+
+function concatWithSep(separator) {
+  const args = Array.prototype.slice.call(arguments, 1);
+  console.log(args.join(separator))
+  return args.join(separator)
+}
+console.log(concatWithSep('a', 2, 88))
