@@ -1056,7 +1056,7 @@ Function.prototype.myOwnBind = function(context, ...outerArgs) {
     return fn.apply(context, [...outerArgs, ...args])
   }
 } */
-
+/* 
 Function.prototype.myOwnBind = function(context) {
   let func = this;
   return function(){
@@ -1074,6 +1074,24 @@ const child = {
 }
 
 const newFunc = logAgeChild.myOwnBind(child);
-newFunc()
+newFunc() */
 
 
+Function.prototype.myBindWithArgs = function(context, ...outerArgs) {
+  let func = this; 
+  return function(...args){
+    func.apply(context, [...outerArgs, ...args]);
+  }
+} 
+
+const objForBind = {
+  func: 'bind',
+  args: [1, 2, 3],
+}
+
+function logArgs(first, city){
+  console.log(`${this.args} in ${first} object ${city}`)
+}
+
+let newFunc = logArgs.myBindWithArgs(objForBind, 5555);
+newFunc('hhhhhhhhhhhhhhhn')
