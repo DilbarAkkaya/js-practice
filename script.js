@@ -1146,3 +1146,21 @@ function concatWithSep(separator) {
   return args.join(separator)
 }
 console.log(concatWithSep('a', 2, 88))
+//add(5)(9)(-4)(1) -> 11. How to implement?
+function add(aa, bb, cc, dd) {
+  return aa + bb + cc + dd;
+}
+
+function curryF(f) {
+  return function (aa) {
+    return function (bb) {
+      return function (cc){
+        return function (dd){
+          return f(aa, bb, cc, dd);
+        }
+      }
+    }
+  }
+}
+let addDig = curryF(add);
+console.log(addDig(5)(9)(-4)(1));
