@@ -1034,7 +1034,7 @@ function unigue(arr){
 
 console.log(unigue(values));
 
-let empl = {
+/* let empl = {
   firstName: 'Suzan',
 }
 function myBind(){
@@ -1049,3 +1049,31 @@ Function.prototype.myBind = function(context, ...outerArgs){
     return fn.apply(context, [...outerArgs, ...args]);  
   }
 }
+
+Function.prototype.myOwnBind = function(context, ...outerArgs) {
+  const fn = this; 
+  return function(...args) {
+    return fn.apply(context, [...outerArgs, ...args])
+  }
+} */
+
+Function.prototype.myOwnBind = function(context) {
+  let func = this;
+  return function(){
+    func.apply(context);
+  }
+}
+
+function logAgeChild(){
+  console.log(this.name)
+}
+
+const child = {
+  name: 'Mark',
+  age: 10,
+}
+
+const newFunc = logAgeChild.myOwnBind(child);
+newFunc()
+
+
