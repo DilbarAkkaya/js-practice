@@ -1033,3 +1033,19 @@ function unigue(arr){
 }
 
 console.log(unigue(values));
+
+let empl = {
+  firstName: 'Suzan',
+}
+function myBind(){
+  console.log(this.firstName)
+}
+let newLog = myBind.bind(empl)
+newLog()
+
+Function.prototype.myBind = function(context, ...outerArgs){
+  const fn = this;
+  return function(...args){
+    return fn.apply(context, [...outerArgs, ...args]);  
+  }
+}
