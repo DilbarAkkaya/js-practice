@@ -802,7 +802,7 @@ function muBindES6Concat(fn, context, ...rest){
 }
 muBindES6Concat(printName, person, 40)();
 
-function makeNum(num, fn){
+/* function makeNum(num, fn){
   return fn ? fn(num) : num;
 }
 function five(fn){
@@ -826,7 +826,7 @@ function plus(right) {
   }
  }
 
-console.log(five(plus(seven(minus(three())))));
+console.log(five(plus(seven(minus(three()))))); */
 
 /* class MyElement extends HTMLElement {
   constructor() { super();  }
@@ -1164,3 +1164,40 @@ function curryF(f) {
 }
 let addDig = curryF(add);
 console.log(addDig(5)(9)(-4)(1));
+
+function makeNum(num, fn){
+  return fn ? fn(num) : num;
+}
+function five(fn){
+  return makeNum(5, fn);
+}
+function seven(fn){
+  return makeNum(7, fn);
+}
+function three(fn){
+  return makeNum(3, fn);
+}
+
+function plus(right) {
+  return function(left) {
+    return left + right;
+  }
+}
+ function minus(right){
+  return function(left) {
+    return left -right;
+  }
+ }
+
+console.log(five(plus(seven(minus(three())))));
+
+Array.prototype.myReduce = function(callback, initialValue) {
+  let acc = arguments.length >= 2 ? initialValue : this[0];
+  for(let i = 0; i < this.length; i++) {
+    acc = callback(acc, this[i], i, this);
+  }
+  return acc;
+}
+console.log([1, 2, 3].myReduce((acc, val)=>{
+  return acc + val
+}, 3))
