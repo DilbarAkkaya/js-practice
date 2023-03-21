@@ -772,11 +772,11 @@ console.log(repeating('hello', 3))
 let person = {
   firstName: 'jhon',
 }
-function myBind(){
+/* //function myBind(){
   console.log(this.firstName)
-}
-let logName = myBind.bind(person)
-logName()
+} */
+//let logName = myBind.bind(person)
+//logName()
 
 Function.prototype.myBind = function(context, ...outerArgs){
   const fn = this;
@@ -784,6 +784,9 @@ Function.prototype.myBind = function(context, ...outerArgs){
     return fn.apply(context, [...outerArgs, ...args]);  
   }
 }
+
+let bindF = printName.myBind(person);
+bindF(222222)
 
 function myBindES6(fn, context, ...rest){
   return function(...args){
@@ -793,14 +796,14 @@ function myBindES6(fn, context, ...rest){
 function printName(age){
   console.log(this.firstName + this.firstName + age)
 }
-myBindES6(printName, person, 25)();
+//myBindES6(printName, person, 25)();
 
 function muBindES6Concat(fn, context, ...rest){
   return function(...args){
     return fn.apply(context, rest.concat(args));
   }
 }
-muBindES6Concat(printName, person, 40)();
+//muBindES6Concat(printName, person, 40)();
 
 /* function makeNum(num, fn){
   return fn ? fn(num) : num;
@@ -1201,3 +1204,19 @@ Array.prototype.myReduce = function(callback, initialValue) {
 console.log([1, 2, 3].myReduce((acc, val)=>{
   return acc + val
 }, 3))
+
+let startTime = null;
+let period = 0;
+function extendedOutput(period) {
+  if (startTime === null) {
+    startTime = Date.now();
+  } else {
+    const passedTime = Date.now() - startTime;
+    console.log(`${passedTime} ms since the first call`);
+    period += period;
+  }
+  setTimeout(()=> {
+    extendedOutput(period), period
+  })
+}
+extendedOutput(100)
